@@ -67,7 +67,7 @@
 <?php 
 while($row=mysqli_fetch_assoc($result)){
     echo "<img src='../db/".$row['Gambar']."' style='width:100%' class='featured-image' alt=''>
-    <h6>".$judul."</h6>        
+    <h3>".$judul."</h3>        
     <p>".$row["Isi"]."</p>";
 }?>
 </article>

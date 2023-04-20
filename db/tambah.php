@@ -1,48 +1,3 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>COFFEE</title>
-<link rel="stylesheet" href="../assets/style.css">
-<script src="https://kit.fontawesome.com/5c90e171df.js" crossorigin="anonymous"></script>
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" 
-rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" 
-crossorigin="anonymous">
-</head>
-<body>
-<header>
-<nav class="navbar navbar-expand-lg navbar-light bg-white" style="margin-bottom:5px;">
-    <div class="container-fluid">
-    <a class="navbar-brand" href="#">
-        <img src="../assets/Image/icon.png" style="width:180px;" alt="">
-    </a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarNavDropdown" style="font-weight:bold;">
-        <ul class="navbar-nav">
-        <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="#">Beranda</a>
-        </li>
-        <li class="nav-item">
-            <a class="nav-link" href="../main/berita.php">Berita</a>
-        </li>
-        <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-            Profile
-            </a>
-            <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-            <li><a class="dropdown-item" href="#">Profile</a></li>
-            <li><a class="dropdown-item" href="../logout.php">Logout</a></li>
-            </ul>
-        </li>
-        </ul>
-    </div>
-    </div>
-</nav>
-</header>
 <?php
     session_start();
     require "koneksi.php";
@@ -85,6 +40,51 @@ crossorigin="anonymous">
         </script>";
     }
 ?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>COFFEE</title>
+<link rel="stylesheet" href="../assets/style.css">
+<script src="https://kit.fontawesome.com/5c90e171df.js" crossorigin="anonymous"></script>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" 
+rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" 
+crossorigin="anonymous">
+</head>
+<body>
+<header>
+<nav class="navbar navbar-expand-lg navbar-light bg-white" style="margin-bottom:5px;">
+    <div class="container-fluid">
+    <a class="navbar-brand" href="#">
+        <img src="../assets/Image/icon.png" style="width:180px;" alt="">
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNavDropdown" style="font-weight:bold;">
+        <ul class="navbar-nav">
+        <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="../index.php">Beranda</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="../main/menu.php">Berita</a>
+        </li>
+        <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Profile
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+            <li><a class="dropdown-item" href="#">Profile</a></li>
+            <li><a class="dropdown-item" href="../logout.php">Logout</a></li>
+            </ul>
+        </li>
+        </ul>
+    </div>
+    </div>
+</nav>
+</header>
 <body>
 <div class="container">
     <h1 style="text-align:center; margin-bottom:5px;">Tambah Data</h1>

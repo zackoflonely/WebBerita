@@ -27,7 +27,7 @@
                   <a class="nav-link active" aria-current="page" href="#">Beranda</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="info.php">Berita</a>
+                  <a class="nav-link" href="main/menu.php">Berita</a>
                 </li>
                 <li class="nav-item dropdown">
                   <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -78,7 +78,7 @@ if($i<4){
 ?>
 </div>
 <div style="margin-top:50px; text-align:center;">
-  <button class="btn btn-primary" style="width:auto;"><a href="main/menu.php" style="text-decoration:None; color:white;">View All</a></button>
+  <button class="btn btn-primary" style="width:auto;"><a href="Main/menu.php" style="text-decoration:None; color:white;">View All</a></button>
 </div>
 </div>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
