@@ -27,15 +27,15 @@ crossorigin="anonymous">
             <a class="nav-link active" aria-current="page" href="#">Beranda</a>
         </li>
         <li class="nav-item">
-            <a class="nav-link" href="info.php">Berita</a>
+            <a class="nav-link" href="../main/berita.php">Berita</a>
         </li>
         <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
             Profile
             </a>
             <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-            <li><a class="dropdown-item" href="db/tambah.php">Tambah</a></li>
-            <li><a class="dropdown-item" href="login.php">Log In</a></li>
+            <li><a class="dropdown-item" href="#">Profile</a></li>
+            <li><a class="dropdown-item" href="../logout.php">Logout</a></li>
             </ul>
         </li>
         </ul>
@@ -48,7 +48,7 @@ crossorigin="anonymous">
     require "koneksi.php";
     $username = $_SESSION['username'];
     if($username == '' ){
-        header('location:../logout.php');
+        header('location:../login.php');
     }else{
     if(isset($_POST["tambah"])){
         $judul = $_POST["judul"];
@@ -86,10 +86,10 @@ crossorigin="anonymous">
     }
 ?>
 <body>
-<div>
+<div class="container">
     <h1 style="text-align:center; margin-bottom:5px;">Tambah Data</h1>
     <form action="" method="POST" enctype="multipart/form-data">
-        <input type="file" name="gambar">
+        <input type="file" name="gambar" accept=".gif,.jpg,.jpeg,.png">
         <br>
         Judul
         <input type="text" name="judul">
@@ -100,7 +100,7 @@ crossorigin="anonymous">
         Isi
         <textarea name="isi" style="width:100%;" rows="40" id="isi"></textarea>
         <br>
-        <input type="submit" name="tambah" style="margin-top:5px;" value="Upload">
+        <button class="btn btn-success" type="submit" name="tambah" style="margin:10px; float:right;">Upload</button>
         <!-- <button type="submit" name="tambah">Tambah</button> -->
     </form>
 <?php }?>
@@ -108,41 +108,37 @@ crossorigin="anonymous">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <link rel="preconnect" href="https://fonts.gstatic.com">
 <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&family=Play&display=swap" rel="stylesheet"> 
-<footer style="margin-left:50px; margin-top:50px;">
-      <div class="row">
-        <div class="col-sm-8 col-md-4">
-          <img src="../assets/Image/icon.png" style="width:180px;" alt="">
-          <br>
-          <a>Puji syukur kita panjatkan Kehadirat Tuhan Yang Maha Esa sehubungan dengan telah berfungsinya Website Kejaksaan Tinggi Kalimantan Timur yang merupakan salah satu langkah upaya penerapan teknologi informasi menuju reformasi birokrasi kejaksaan untuk Indonesia lebih maju.</a>
-        </div>
-        <div class="col-xs-6 col-md-2">
-          <h6 style="font-weight: bold;">Kontak Kami</h6>
-          <ul class="social-icons">
-            <li><a class="instagram" href="#"><i class="fa fa-instagram" style="margin-right:5px;"></i></a>@username</li>
-            <li><a class="twitter" href="#"><i class="fa fa-twitter"></i></a></li>
-            <li><a class="dribbble" href="#"><i class="fa fa-dribbble"></i></a></li>
-            <li><a class="linkedin" href="#"><i class="fa fa-linkedin"></i></a></li>   
-          </ul>
-        </div>
-        <div class="col-xs-6 col-md-3">
-          <h6 style="font-weight: bold;">Categories</h6>
-          <ul class="footer-links">
-            <a href="" style="text-decoration:none; color:black;">Lokasi</a>
-          </ul>
-        </div>
-        <div class="col-xs-6 col-md-2">
-          <h6 style="font-weight: bold;">Permohonan Informasi</h6>
-          <ul class="footer-links">
-            <a href="" style="text-decoration:none; color:black;">PPID</a>
-          </ul>
-        </div>
+<footer style="margin-left:50px; margin-top:10%;">
+  <div class="footers container-fluid" style="padding-left:50px; padding-bottom:10%;">
+    <div class="row justify-content-center">
+      <div class="col-sm-4">
+        <img src="../assets/Image/icon.png" style="width:180px;" alt="">
+        <br>
+        <a style="font-size:medium;">Puji syukur kita panjatkan Kehadirat Tuhan Yang Maha Esa sehubungan dengan telah berfungsinya Website Kejaksaan Tinggi Kalimantan Timur yang merupakan salah satu langkah upaya penerapan teknologi informasi menuju reformasi birokrasi kejaksaan untuk Indonesia lebih maju.</a>
       </div>
-      <hr>
-      <!-- <div class="row" style="text-align: center;">
-          <p class="copyright-text">Copyright &copy; 2017 All Rights Reserved by 
-          <a href="#"></a>.
-          </p>
-      </div> -->
+      <div class="col-md-3">
+        <h6 style="font-weight: bold; font-size:larger;">Kontak Kami</h6>
+        <ul class="social-icons">
+          <li><a class="instagram" href="#"><i class="fa fa-instagram"></i></a>@username</li>
+          <li><a class="twitter" href="#"><i class="fa fa-twitter"></i></a></li>
+          <li><a class="dribbble" href="#"><i class="fa fa-dribbble"></i></a></li>
+          <li><a class="linkedin" href="#"><i class="fa fa-linkedin"></i></a></li>   
+        </ul>
+      </div>
+      <div class="col-md-2">
+        <h6 style="font-weight: bold; font-size:larger;">Alamat</h6>
+        <ul class="footer-links">
+          <a href="" style="text-decoration:none; color:black;">Lokasi</a>
+        </ul>
+      </div>
+      <div class="col-md-3">
+        <h6 style="font-weight: bold; font-size:larger;">Permohonan Informasi</h6>
+        <ul class="footer-links">
+          <a href="" style="text-decoration:none; color:black;">PPID</a>
+        </ul>
+      </div>
+    </div>
+  </div>
 </footer>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" 
 integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" 

@@ -25,7 +25,7 @@
               $selectedOption = $_POST['role']; 
               $_SESSION['role'] = $selectedOption; 
             }
-            if($username == $row["Username"] && $password == $row["Pass"] && $selectedOption=="Admin"){
+            if($username == $row["Username"] && $password == $row["Pass"]){
                 $_SESSION['username'] = $row["ID_Admin"];
                 header('Location: db/tambah.php');
             }
@@ -56,48 +56,22 @@
   </header>
   <div style="min-height: 90.5vh; background-image: url(assets/image/bg3.jpg); background-size: cover;">
   <div style="padding-top: 8%; display: flex; height: 100%; justify-content: center; align-items: center;">
-      <form method="POST" id="login">
-        <div class="box1 container-fluid">
-        <h1>Sign In</h1>
-        <table class="table">
-          <tbody>
-            <tr>
-              <th scope="row">Username</th>
-              <td>:</td>
-              <td><input type="text" name="nama" class="email"/></td>
-            </tr>
-            <tr>
-              <th scope="row">Password</th>
-              <td>:</td>
-              <td><input type="password" name="password" class="email"/></td>
-            </tr>
-            <tr>
-                <th scope="row">Role</th>
-                <td>:</td>
-                <td>
-                  <select name="role">
-                  <option value="None">None</option>
-                  <option value="Admin">Admin</option>
-                  <option value="Staff">Staff</option>
-                  <option value="User">User</option>
-              </select></td>
-            </tr>
-          </tbody>
-        </table>
-        <div style="color: black;">
-          <input type="checkbox">
-          Remember me
-        </div>
-        <button style="margin-bottom: 2%;" type="submit" name="submit"
-        class="btn btn-success">
-          Sign In
-        </button>
-      </div>
-      </form>
+  <form method="POST" id="login">
+    <div class="mb-3">
+      <label for="exampleInputEmail1" class="form-label">Username</label>
+      <input type="text" name="nama" class="form-control" >
+      <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
     </div>
-    <div style="color: white; padding-top: 1%; text-align: center;">Dont have an account?
+    <div class="mb-3">
+      <label for="exampleInputPassword1" class="form-label">Password</label>
+      <input type="password" name="password" class="form-control" id="exampleInputPassword1">
+    </div>
+    <button type="submit" name="submit" class="btn btn-primary" style="float:right;">Submit</button>
+  </form>
+  </div>
+    <!-- <div style="color: white; padding-top: 1%; text-align: center;">Dont have an account?
       <a href="signup.php" style="text-decoration: none;  color:#3498db;">Sign Up</a>
-    </div>
+    </div> -->
     <footer>
       <div class="footers" style="position: absolute; bottom: 0; width: 100%;">
         <a href="#" style="color: white;"><i class="fa fa-facebook"></i></a>
