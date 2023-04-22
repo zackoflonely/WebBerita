@@ -327,3 +327,6 @@ table{
 .judul h5 a:hover{
   color: #007bb6;
 }
+ol {
+  font-weight: bold;
+}

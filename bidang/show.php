@@ -142,7 +142,7 @@
 
     $judul = $_GET['judul'];
 
-    $result = mysqli_query($conn,"SELECT*FROM berita WHERE Judul ='$judul'");
+    $result = mysqli_query($conn,"SELECT*FROM informasi_bidang WHERE Judul ='$judul'");
 
     }
 
@@ -164,7 +164,7 @@
 
 while($row=mysqli_fetch_assoc($result)){
 
-    echo "<img src='../db/".$row['Gambar']."' style='width:100%' class='featured-image' alt=''>
+    echo "<img src='".$row['Gambar']."' style='width:100%' class='featured-image' alt=''>
 
     <h3>".$judul."</h3>        
 

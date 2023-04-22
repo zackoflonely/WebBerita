@@ -1,10 +1,16 @@
+<?php
+  session_start();
+  $user = ( $_SESSION['user']);
+  require "db/koneksi.php";
+  $result =  mysqli_query($conn,"SELECT * FROM berita ORDER BY ID_Berita DESC LIMIT 3;")
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>COFFEE</title>
+  <title>KEJAKSAAN</title>
   <link rel="stylesheet" href="assets/style.css">
   <script src="https://kit.fontawesome.com/5c90e171df.js" crossorigin="anonymous"></script>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" 
@@ -30,31 +36,48 @@
                   <a class="nav-link" href="main/menu.php">Berita</a>
                 </li>
                 <li class="nav-item dropdown">
-                  <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    More
+                  <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    Bidang
                   </a>
-                  <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                    <li><a class="dropdown-item" href="db/tambah.php">Myprofile</a></li>
-                    <li><a class="dropdown-item" href="logout.php">Logout</a></li>
+                  <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <li><a class="dropdown-item" href="bidang/pembinaan.php">Pembinaan</a></li>
+                    <li><a class="dropdown-item" href="bidang/intelijen.php">Intelijen</a></li>
+                    <li><a class="dropdown-item" href="bidang/umum.php">Tindak Pidana Umum</a></li>
+                    <li><a class="dropdown-item" href="bidang/khusus.php">Tindak Pidanan Khusus</a></li>
+                    <li><a class="dropdown-item" href="bidang/perdata.php">Perdata dan Tata Usaha</a></li>
+                  </ul>
+                </li>
+                <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    Profile
+                  </a>
+                  <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <li><a class="dropdown-item" href="profile/struktur.php">Strutur Organisasi</a></li>
+                    <li><a class="dropdown-item" href="profile/visimisi.php">Visi Misi</a></li>
+                    <li><a class="dropdown-item" href="profile/perintah.php">Perintah Harian</a></li>
+                    <li><a class="dropdown-item" href="profile/doktrin.php">Doktrin</a></li>
+                    <li><a class="dropdown-item" href="profile/tugas.php">Tugas dan Wewenang</a></li>
                   </ul>
                 </li>
               </ul>
-            </div>
-            <div class="collapse navbar-collapse" style="justify-content:right;">
-            <ul class="navbar-nav">
-              <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="db/tambah.php">Create</a>
+              <div class="collapse navbar-collapse" style="justify-content:right;">
+              <ul class="navbar-nav">
+                <li class="nav-item">
+                      <a class="nav-link active" aria-current="page" href="db/tambah.php">Create</a>
                 </li>
-            </ul>
+                <?php
+                if($user=='admin'){
+                  echo '<li class="nav-item">
+                  <a class="nav-link active" aria-current="page" href="logout.php">Logout</a>
+                  </li>';  
+                };
+                ?>
+              </ul>
+              </div>
             </div>
           </div>
         </nav>
   </header>
-  <?php
-      session_start();
-      require "db/koneksi.php";
-      $result = mysqli_query($conn,"SELECT*FROM berita");
-  ?>
 <div style="width:100%;">
 <img src="assets/Image/img1.jpg" style="width: 100%; margin-top:5%;" alt="">
 <h1 style="text-align:center; padding: 3%; font-weight:bold;">BERITA</h1>
@@ -62,19 +85,33 @@
 <?php
 while($row=mysqli_fetch_assoc($result)){
 $i = 1;
-if($i<4){
+if($i<3){
   echo '<div class="col-sm-3" style="margin-right:1.5vw;">
     <div class="card" style="width: 18rem;">
       <img src="db/'.$row["Gambar"].'" class="card-img-top" alt="...">
       <div class="card-body">
-        <h5 class="card-title text-center" id="nama"><a href="Main/berita.php?judul='.$row["Judul"].'"style="text-decoration:None; color:black;">'.$row["Judul"].'</a></h5>
+        <h5 class="card-title text-center" id="nama">'.$row["Judul"].'</h5>
         <h6 class="card-title text-left" id="harga">'.implode(' ', array_slice(str_word_count($row["Isi"], 1), 0, 30)).'</h6>
       </div>
+      <button class="btn btn-dark">
+      <a href="Main/berita.php?judul='.$row["Judul"].'"style="text-decoration:None; color:white;">Baca Selengkapnya</a>
+      </button>
+      '?> 
+      <?php 
+          if($user == 'admin' ){
+            echo'
+            <div style="text-align:center;  margin:2%;">
+            <button class="btn btn-primary">
+            <a href="db/edit.php?judul='.$row["Judul"].'"style="text-decoration:None; color:white;">Edit</a>
+            </button>
+            <button class="btn btn-danger">
+            <a href="db/hapus.php?judul='.$row["Judul"].'"style="text-decoration:None; color:white;">Hapus</a>
+            </button></div>';
+          }
+      echo'
       </div>
       </div>';
-      $i++;
-  }
-}
+}}
 ?>
 </div>
 <div style="margin-top:50px; text-align:center;">
