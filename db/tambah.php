@@ -13,6 +13,11 @@
     }else{
 
     if(isset($_POST["tambah"])){
+        if(isset($_POST['judul'])) { 
+
+            $jenis = $_POST["jenis"];
+
+          }
 
         $judul = $_POST["judul"];
 
@@ -52,7 +57,7 @@
 
             // Simpan alamat gambar ke database
 
-            $query = "INSERT INTO berita VALUES('', '$username' ,'$target_file', '$judul', '$tanggal', '$isi')";
+            $query = "INSERT INTO berita VALUES('', '$username' ,'$jenis','$target_file', '$judul', '$tanggal', '$isi')";
 
             if (mysqli_query($conn, $query)) {
 
@@ -126,7 +131,7 @@ crossorigin="anonymous">
         <a class="nav-link active" aria-current="page" href="../../index.php">Beranda</a>
     </li>
     <li class="nav-item">
-        <a class="nav-link" href="../../main/menu.php">Berita</a>
+        <a class="nav-link" href="../../Main/menu.php">Berita</a>
     </li>
     <li class="nav-item dropdown">
         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
@@ -153,17 +158,9 @@ crossorigin="anonymous">
         </ul>
     </li>
     </ul>
-    <div class="collapse navbar-collapse" style="justify-content:right;">
-    <ul class="navbar-nav">
-    <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="EditText.php">Edit</a>
-        </li>
-    </ul>
-    </div>
 </div>
 </div>
 </nav>
-
 </header>
 
 <body>
@@ -181,6 +178,16 @@ crossorigin="anonymous">
         Judul
 
         <input type="text" name="judul">
+        <br>
+	Jenis
+        <select name="jenis">
+
+            <option value="berita">berita</option>
+
+            <option value="pengumuman">pengumuman</option>
+
+        </select>
+
 
         <br>
 
@@ -212,19 +219,19 @@ crossorigin="anonymous">
 
 <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&family=Play&display=swap" rel="stylesheet"> 
 
-<footer style="margin-left:50px; margin-top:10%;">
+<footer>
 
   <div class="footers container-fluid" style="padding-left:50px; padding-bottom:10%;">
 
     <div class="row justify-content-center">
 
-      <div class="col-sm-4">
+      <div class="col-sm-5">
 
-        <img src="../assets/Image/icon.png" style="width:180px;" alt="">
+        <img src="../assets/Image/icon.png" style="width:250px;" alt="">
 
         <br>
 
-        <a style="font-size:medium;">Puji syukur kita panjatkan Kehadirat Tuhan Yang Maha Esa sehubungan dengan telah berfungsinya Website Kejaksaan Tinggi Kalimantan Timur yang merupakan salah satu langkah upaya penerapan teknologi informasi menuju reformasi birokrasi kejaksaan untuk Indonesia lebih maju.</a>
+        <a style="font-size:medium;">Puji syukur kita panjatkan Kehadirat Tuhan Yang Maha Esa sehubungan dengan telah berfungsinya Website Kejaksaan Tinggi Balikpapan yang merupakan salah satu langkah upaya penerapan teknologi informasi menuju reformasi birokrasi kejaksaan untuk Indonesia lebih maju.</a>
 
       </div>
 
@@ -234,25 +241,13 @@ crossorigin="anonymous">
 
         <ul class="social-icons">
 
-          <li><a class="instagram" href="#"><i class="fa fa-instagram"></i></a>@username</li>
+          <li><a class="instagram" href="https://www.instagram.com/kejari.balikpapan/"><i class="fa fa-instagram"></i></a></li>
 
-          <li><a class="twitter" href="#"><i class="fa fa-twitter"></i></a></li>
+          <li><a class="twitter" href="https://twitter.com/KN_Balikpapan"><i class="fa fa-twitter"></i></a></li>
 
-          <li><a class="dribbble" href="#"><i class="fa fa-dribbble"></i></a></li>
+          <li><a class="facebook" href=" https://www.facebook.com/kejari.balikpapan/?_rdc=1&_rdr"><i class="fa fa-facebook"></i></a></li>
 
-          <li><a class="linkedin" href="#"><i class="fa fa-linkedin"></i></a></li>   
-
-        </ul>
-
-      </div>
-
-      <div class="col-md-2">
-
-        <h6 style="font-weight: bold; font-size:larger;">Alamat</h6>
-
-        <ul class="footer-links">
-
-          <a href="" style="text-decoration:none; color:black;">Lokasi</a>
+          <li><a class="youtube" href="https://www.youtube.com/@kejari.balikpapan848"><i class="fa fa-youtube"></i></a></li>   
 
         </ul>
 
@@ -260,11 +255,11 @@ crossorigin="anonymous">
 
       <div class="col-md-3">
 
-        <h6 style="font-weight: bold; font-size:larger;">Permohonan Informasi</h6>
+        <h6 style="font-weight: bold; font-size:larger;">Alamat</h6>
 
         <ul class="footer-links">
 
-          <a href="" style="text-decoration:none; color:black;">PPID</a>
+          <li><a href="https://goo.gl/maps/HHyHtfyVDYx34YFi8" style="text-decoration:none; color:black;"> Jln.Jendral Sudirman No.70 Kota Balikpapan, Kalimantan Timur</a></li>
 
         </ul>
 

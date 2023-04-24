@@ -50,13 +50,13 @@
 
                 <li class="nav-item">
 
-                  <a class="nav-link active" aria-current="page" href="../index.php">Beranda</a>
+                  <a class="nav-link" aria-current="page" href="../index.php">Beranda</a>
 
                 </li>
 
                 <li class="nav-item">
 
-                  <a class="nav-link" href="menu.php">Berita</a>
+                  <a class="nav-link active" href="menu.php">Berita</a>
 
                 </li>
 
@@ -156,7 +156,7 @@
 
 <main>
 
-<div id="content" style="margin-left:1%; width:70%;">
+<div id="content" style="margin-left:1%;>
 
 <article class="card">
 
@@ -176,7 +176,7 @@ while($row=mysqli_fetch_assoc($result)){
 
 </div>
 
-<aside style="width:29%;">
+<aside>
 
 <div style="padding: 5%; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);">
 
@@ -230,13 +230,13 @@ while($row=mysqli_fetch_assoc($result)){
 
     <div class="row justify-content-center">
 
-      <div class="col-sm-4">
+      <div class="col-sm-5">
 
-        <img src="../assets/Image/icon.png" style="width:180px;" alt="">
+        <img src="../assets/Image/icon.png" style="width:250px;" alt="">
 
         <br>
 
-        <a style="font-size:medium;">Puji syukur kita panjatkan Kehadirat Tuhan Yang Maha Esa sehubungan dengan telah berfungsinya Website Kejaksaan Tinggi Kalimantan Timur yang merupakan salah satu langkah upaya penerapan teknologi informasi menuju reformasi birokrasi kejaksaan untuk Indonesia lebih maju.</a>
+        <a style="font-size:medium;">Puji syukur kita panjatkan Kehadirat Tuhan Yang Maha Esa sehubungan dengan telah berfungsinya Website Kejaksaan Tinggi Balikpapan yang merupakan salah satu langkah upaya penerapan teknologi informasi menuju reformasi birokrasi kejaksaan untuk Indonesia lebih maju.</a>
 
       </div>
 
@@ -246,25 +246,13 @@ while($row=mysqli_fetch_assoc($result)){
 
         <ul class="social-icons">
 
-          <li><a class="instagram" href="#"><i class="fa fa-instagram"></i></a>@username</li>
+          <li><a class="instagram" href="https://www.instagram.com/kejari.balikpapan/"><i class="fa fa-instagram"></i></a></li>
 
-          <li><a class="twitter" href="#"><i class="fa fa-twitter"></i></a></li>
+          <li><a class="twitter" href="https://twitter.com/KN_Balikpapan"><i class="fa fa-twitter"></i></a></li>
 
-          <li><a class="dribbble" href="#"><i class="fa fa-dribbble"></i></a></li>
+          <li><a class="facebook" href=" https://www.facebook.com/kejari.balikpapan/?_rdc=1&_rdr"><i class="fa fa-facebook"></i></a></li>
 
-          <li><a class="linkedin" href="#"><i class="fa fa-linkedin"></i></a></li>   
-
-        </ul>
-
-      </div>
-
-      <div class="col-md-2">
-
-        <h6 style="font-weight: bold; font-size:larger;">Alamat</h6>
-
-        <ul class="footer-links">
-
-          <a href="" style="text-decoration:none; color:black;">Lokasi</a>
+          <li><a class="youtube" href="https://www.youtube.com/@kejari.balikpapan848"><i class="fa fa-youtube"></i></a></li>   
 
         </ul>
 
@@ -272,11 +260,11 @@ while($row=mysqli_fetch_assoc($result)){
 
       <div class="col-md-3">
 
-        <h6 style="font-weight: bold; font-size:larger;">Permohonan Informasi</h6>
+        <h6 style="font-weight: bold; font-size:larger;">Alamat</h6>
 
         <ul class="footer-links">
 
-          <a href="" style="text-decoration:none; color:black;">PPID</a>
+          <li><a href="https://goo.gl/maps/HHyHtfyVDYx34YFi8" style="text-decoration:none; color:black;"> Jln.Jendral Sudirman No.70 Kota Balikpapan, Kalimantan Timur</a></li>
 
         </ul>
 
