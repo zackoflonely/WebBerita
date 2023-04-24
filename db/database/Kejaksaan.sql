@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Waktu pembuatan: 21 Apr 2023 pada 10.33
+-- Waktu pembuatan: 24 Apr 2023 pada 10.02
 -- Versi server: 10.4.22-MariaDB
 -- Versi PHP: 7.4.27
 
@@ -60,7 +60,6 @@ CREATE TABLE `berita` (
 --
 
 INSERT INTO `berita` (`ID_Berita`, `ID_Admin`, `Gambar`, `Judul`, `Tanggal`, `Isi`) VALUES
-(6, 5, 'uploads/img2.jpg', 'Kegiatan Jaksa Menyapa dengan Restorative Justice', '2023-04-04', 'Pada hari Rabu 25 Aprol 2022 mulai pukul 11.00 sampai dengan 12.00 wita bertempat di Kantor RRI Samarinda telah dilaksanakan program Jaksa Menyapa  iteraktif melalui radio RRI Pro1 Samarinda yang disiarkan juga secara online melalui Facebook RRI Pro1 Samarinda dipandu oleh sdri. METTA Selaku penyiar RRI Samarinda Pro1 FM 97.6 Mhz dqn 88.5 FM.'),
 (7, 5, 'uploads/img3.jpg', 'Jaksa Masuk Sekolah (JMS) di Madrasah Aliyah An Nur Samarinda', '2023-04-20', 'Pada hari Selasa tanggal 31 Mei 2022 sekira pukul 14.00 WITA, Kejaksaan Tinggi Kalimantan Timur melalui Bidang Intelijen kembali melaksanakan kegiatan Penyuluhan hukum melalui program Jaksa Masuk Sekolah (JMS) kepada siswa-siswi di Madrasah Aliyah An Nur Samarinda. \r\n\r\nKegiatan Jaksa Masuk Sekolah ini mengangkat tema pengenalan tupoksi Kejaksaan, Narkotika dan Perlindungan serta pencegahan kekerasan terhadap anak, yang disampaikan langsung oleh narasumber dari Kejaksaan Tinggi Kalimantan Timur Sdr. Toni Yuswanto, SH.MH (Kasi Penkum Kejati Kaltim) dan Sdr. Praden Kasep Simanjuntak, SH (Kasi B Kejati Kaltim) dan dihadiri oleh peserta siswa-siswi dari Madrasah Aliyah An Nur sebanyak 50 (lima puluh)  orang.\r\n\r\nDalam kegiatan JMS dibukalangsung oleh Bapak Dr.H. BAEQUNI selaku Kepala Kantor Kementrian Agama Kota Samarinda yang didampingi oleh Bapak JUNAIDI NOOR Kasi Penmad Kemenag Kota Samarinda dan Bapak ACHMAD HAMIDI Kepala Madrasah An Nur Samarinda dan acara dilanjutkan dengan pemaparan materi oleh narasumber dari Tim JMS Kejati Kaltim. Selama kegiatan JMS, siswa-siswi nampak antusias dengan banyak mengajukan pertanyaan kepada narasumber. \r\n\r\nDengan kegiatan JMS inidi maksudkan untuk meningkatkan kesadaran hukum generasi muda, dengan memperkenalkan hukum sejak dininantinya diharapkan para pelajar melakakan hukum. Dengan para pelajar mengenali hukum sejak dini maka akan dapat menjauhkan diri dari hukuman dan mampu sebagai corong hukum kepada masyarakat disekitarnya. \r\n\r\n#kejaksaanri #kejaksaanagung #kejatikaltim #jms2022 #jaksamasuksekolah #Madrasahlaiyah #depdikbud #depag');
 
 -- --------------------------------------------------------
@@ -79,12 +78,19 @@ CREATE TABLE `informasi_bidang` (
   `Isi` varchar(5000) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
+-- --------------------------------------------------------
+
 --
--- Dumping data untuk tabel `informasi_bidang`
+-- Struktur dari tabel `pengumuman`
 --
 
-INSERT INTO `informasi_bidang` (`ID_Info`, `ID_Admin`, `Judul`, `Jenis`, `Gambar`, `Waktu`, `Isi`) VALUES
-(4, 5, 'Contoh kasus pidana umum', 'umum', 'uploads/pidana-umum.jpg', '2023-04-21', 'Sebagai kantor hukum, advokat dan / atau pengacara di Indonesia pada umumnya, kantor hukum LHS & PARTNERS juga melayani penanganan kasus hukum pidana umum sebagaimana tercantum dalam KUHP dan masalah hukum lainnya seperti kantor pengacara lainnya. Dalam penanganan kasus yang diduga ada tindak pidana / pelanggaran hukum pidana, sebelum perkara tersebut dilaporkan ke Kepolisian atau aparat penegak hukum lainnya, kami biasanya akan mengusahakan  penanganan secara nonlitigasi dan kekeluargaan.\r\n\r\nBerikut ini adalah beberapa kasus hukum pidana umum yang dapat kami berikan layanan jasa hukumnya, antara lain sebagai berikut :\r\n\r\n+ PENIPUAN & PENGGELAPAN\r\n+ PENCEMARAN NAMA BAIK & FITNAH\r\n+ PENGANIAYAAN & PENGEROYOKAN\r\n+ KASUS PIDANA PEMBUNUHAN\r\n+ PEMERASAN & PENGANCAMAN\r\n+ PERSELINGKUHAN & NIKAH SIRI\r\n+ TINDAK PIDANA PENCABULAN\r\n+ PERUSAKAN BARANG / BENDA\r\n+ KECELAKAAN LALULINTAS\r\n+ KASUS PIDANA PERJUDIAN\r\n+ PEMALSUAN SURAT & MATA UANG\r\n+ KASUS PIDANA PENADAHAN\r\n+ PENCURIAN & PERAMPOKAN\r\n+ PEMBUKAAN RAHASIA ORANG\r\n+ SUMPAH & SAKSI PALSU\r\n+ MASUK RUMAH & PEKARANGAN\r\n+ DAN LAIN SEBAGAINYA\r\n\r\nBagi Anda yang sedang mengalami atau terkena kasus pidana umum seperti tersebut diatas, baik sebagai pelapor, saksi, korban ataupun Tersangka, kantor kami dapat membantu Anda sebagai Pengacara yang akan mendampingi Anda dalam setiap proses hukum terhadap kasus yang sedang berjalan tersebut.\r\n\r\nBagi anda yang menghendaki layanan jasa hukum penanganan kasus-kasus hukum diatas dari kantor kami, silahkan menghubungi kami di Nomor HP / WhatsApp : 0813-9226-3999.\r\n\r\nSelain memberikan layanan jasa hukum di atas, LHS & PARTNERS juga menangani berbagai kasus hukum seperti kasus pidana umum meliputi : Penipuan & Penggelapan, Pencemaran Nama Baik & Fitnah, Penganiayaan & Pengeroyokan, Kasus Pembunuhan, Pemerasan & Pengancaman, Perselingkuhan & Nikah Siri, Pidana Pencabulan, Perusakan Barang / Benda, Kecelakaan Lalulintas, Kasus Perjudian, Pemalsuan Surat & Mata Uang, Kasus Penadahan, Pencurian & Perampokan, Pembukaan Rahasia Orang, Sumpah & Saksi Palsu, Masuk Rumah / Pekarangan Orang, kasus pidana khusus meliputi : Narkotika & Psikotropika, Tindak pidana UU ITE, Tindak pidana HAKI, Pidana kependudukan, Pidana Kewarganegaraan & imigrasi, Korupsi & gratifikasi, Pidana pornografi, Kdrt / kekerasan dalam rumah tangga, Tindak pidana Lingkungan, Tindak pidana Kehutanan, Pidana pencucian uang, Tindak pidana Kesehatan, Tindak pidana Pangan, Pidana perikanan & kelautan, Tindak pidana Pendidikan, Pidana Eksport Import, Pidana perlindungan anak, Pidana transportasi & penerbangan, Tindak pidana telekomunikasi, Pidana perlindungan konsumen, kasus perdata umum meliputi : Gugatan Perbuatan Melawan Hukum, Kasus Hutang Piutang, Gugatan Sengketa Kerjasama, Gugatan Wanprestasi, Gugatan Lelang Eksekusi, Permohonan Ganti Nama, Pembetulan Asal Usul Orang,  Gugatan Pencemaran Nama Baik, kasus hukum keluarga dan waris meliputi : Adopsi / Pengangkatan Anak, Pengakuan Anak Di Luar Nikah, Pengesahan Anak, Permohonan Wali / Pengampu, Penetapan Ahli Waris, Gugatan Sengketa Warisan, Pengurusan & Pelaksanaan Wasiat, Pembagian Waris Hukum Islam, Pembagian Warisan Non Islam, Pembetulan Akta Kelahiran, kasus hukum perkawinan dan perceraian meliputi : Gugatan Cerai Di Pengadilan Agama, Gugatan Cerai Non Mulsim Di Pn, Gugatan Cerai Pns, Tni & Polri, Pembagian Harta Gono-Gini, Tuntutan Nafkah Anak & Isteri, Gugatan Sengketa Hak Asuh Anak, Dispensasi Perkawinan, Perkawinan Indonesia Asing, Pengesahan Perkawinan / Itsbat Nikah, Pembatalan Perkawinan, kasus hukum pertanahan dan property meliputi : Sengketa Jual Beli Tanah, Sewa Menyewa Tanah & Bangunan, Sengketa Pembelian Aparttemen, Kasus Pembangunan Rumah, Pembebasan Tanah Proyek, Eksekusi Tanah Jaminan Kredit, Pemalsuan Dokumen Tanah, Penempatan Tanah Tanpa Hak, Pidana Pertanahan, dan kasus hukum tata usaha negara meliputi : Pemberhentian Pns, Pemberhentian Pns, Tni & Polri, Pemberhentian Pejabat Daerah, Pemberhentian Pamong Desa, Gugatan Pembatalan Sertifikat Tanah, Penurunan Pangkat Jabatan, Penolakan Pelantikan Pejabat, Dan Lain Sebagainya. Serta kasus hukum bisnis dan perusahaan di Indonesia.');
+CREATE TABLE `pengumuman` (
+  `ID_pengumuman` int(11) NOT NULL,
+  `ID_Admin` varchar(11) NOT NULL,
+  `Judul` varchar(50) NOT NULL,
+  `Tanggal` date NOT NULL,
+  `Isi` varchar(5000) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- --------------------------------------------------------
 
@@ -156,6 +162,12 @@ ALTER TABLE `informasi_bidang`
   ADD KEY `admin3` (`ID_Admin`);
 
 --
+-- Indeks untuk tabel `pengumuman`
+--
+ALTER TABLE `pengumuman`
+  ADD PRIMARY KEY (`ID_pengumuman`);
+
+--
 -- Indeks untuk tabel `profile_img`
 --
 ALTER TABLE `profile_img`
@@ -189,7 +201,13 @@ ALTER TABLE `berita`
 -- AUTO_INCREMENT untuk tabel `informasi_bidang`
 --
 ALTER TABLE `informasi_bidang`
-  MODIFY `ID_Info` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `ID_Info` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+
+--
+-- AUTO_INCREMENT untuk tabel `pengumuman`
+--
+ALTER TABLE `pengumuman`
+  MODIFY `ID_pengumuman` int(11) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT untuk tabel `profile_img`
