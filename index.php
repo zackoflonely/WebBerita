@@ -6,7 +6,7 @@
 
   require "db/koneksi.php";
 
-  $result =  mysqli_query($conn,"SELECT * FROM berita WHERE Jenis = 'berita' ORDER BY ID_Berita DESC LIMIT 3;")
+  $result =  mysqli_query($conn,"SELECT * FROM berita WHERE Jenis = 'berita' ORDER BY ID_Berita DESC LIMIT 3;");
 
 ?>
 
