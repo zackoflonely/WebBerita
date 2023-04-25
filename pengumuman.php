@@ -304,7 +304,7 @@ $result = mysqli_query($conn,"SELECT*FROM berita WHERE Jenis='pengumuman'");
 
 
 
-<div class="row" style="margin:0% 0% 0% 16%;">
+<div class="row" style="justify-content:center; margin:0;">
 
 
 
@@ -320,7 +320,7 @@ while($row=mysqli_fetch_assoc($result)){
 
 
 
-    <div class="card" style="width: 18rem;">
+    <div class="card" style="min-height:35rem;">
 
 
 

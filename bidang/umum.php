@@ -76,11 +76,11 @@
 <br>
 <!-- <img src="assets/Image/img1.jpg" style="width: 100%; margin-top:5%;" alt=""> -->
 <h1 style="text-align:center; padding: 13% 0 5% 0; font-weight:bold;">Kasus Pidana Umum</h1>
-<div class="row" style="margin:0% 0% 0% 16%;">
+<div class="row" style="justify-content:center; margin:0;">
 <?php
 while($row=mysqli_fetch_assoc($result)){
     echo '<div class="col-sm-3" style="margin-right:1.5vw;">
-    <div class="card" style="width: 18rem;">
+    <div class="card" style="min-height:35rem;">
         <img src="'.$row["Gambar"].'" class="card-img-top" alt="...">
         <div class="card-body">
         <h5 class="card-title text-center" id="nama">'.$row["Judul"].'</h5>

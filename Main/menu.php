@@ -151,7 +151,7 @@ $result = mysqli_query($conn,"SELECT*FROM berita WHERE Jenis='berita'");
 
 <h1 style="text-align:center; padding: 13% 0 5% 0; font-weight:bold;">SEMUA BERITA</h1>
 
-<div class="row" style="margin:0% 0% 0% 16%;">
+<div class="row" style="justify-content:center; margin:0;">
 
 <?php
 
@@ -159,7 +159,7 @@ while($row=mysqli_fetch_assoc($result)){
 
     echo '<div class="col-sm-3" style="margin:1.5%;">
 
-    <div class="card" style="width: 18rem; min-height:35rem;">
+    <div class="card" style="min-height:35rem;">
 
         <img src="../db/'.$row["Gambar"].'" class="card-img-top" alt="...">
 

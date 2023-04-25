@@ -183,7 +183,7 @@ if($i<3){
 
   echo '<div class="col-sm-3">
 
-    <div class="card" style="width: 18rem;  min-height:35rem;">
+    <div class="card" style="min-height:35rem;">
 
       <img src="db/'.$row["Gambar"].'" class="card-img-top" alt="...">
 
