@@ -56,7 +56,7 @@
 
                 <li class="nav-item">
 
-                  <a class="nav-link" href="menu.php">Berita</a>
+                  <a class="nav-link" href="../Main/menu.php">Berita</a>
 
                 </li>
 
@@ -70,15 +70,15 @@
 
                   <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
 
-                    <li><a class="dropdown-item" href="../bidang/pembinaan.php">Pembinaan</a></li>
+                    <li><a class="dropdown-item" href="pembinaan.php">Pembinaan</a></li>
 
-                    <li><a class="dropdown-item" href="../bidang/intelijen.php">Intelijen</a></li>
+                    <li><a class="dropdown-item" href="intelijen.php">Intelijen</a></li>
 
-                    <li><a class="dropdown-item" href="../bidang/umum.php">Tindak Pidana Umum</a></li>
+                    <li><a class="dropdown-item" href="umum.php">Tindak Pidana Umum</a></li>
 
-                    <li><a class="dropdown-item" href="../bidang/khusus.php">Tindak Pidanan Khusus</a></li>
+                    <li><a class="dropdown-item" href="khusus.php">Tindak Pidanan Khusus</a></li>
 
-                    <li><a class="dropdown-item" href="../bidang/perdata.php">Perdata dan Tata Usaha</a></li>
+                    <li><a class="dropdown-item" href="perdata.php">Perdata dan Tata Usaha</a></li>
 
                   </ul>
 
@@ -118,7 +118,7 @@
 
               <li class="nav-item">
 
-                    <a class="nav-link active" aria-current="page" href="login.php">Login</a>
+                    <a class="nav-link active" aria-current="page" href="upload.php">Create</a>
 
                 </li>
 
@@ -152,7 +152,7 @@
 
 <br>
 
-<h1 style="text-align:center; padding: 3%; font-weight:bold;">BERITA</h1>
+<h1 style="text-align:center; padding: 3%; font-weight:bold; margin-top: 5%;">BERITA</h1>
 
 <main>
 

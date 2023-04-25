@@ -152,13 +152,11 @@
 
 <br>
 
-<h1 style="text-align:center; padding: 3%; font-weight:bold;">BERITA</h1>
+<h1 style="text-align:center; padding: 3%; font-weight:bold; margin-top: 5%;">BERITA</h1>
 
 <main>
 
-<div id="content" style="margin-left:1%;>
-
-<article class="card">
+<div id="content" style="margin-left:1%;" article class="card">
 
 <?php 
 
