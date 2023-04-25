@@ -120,7 +120,7 @@ $result = mysqli_query($conn,"SELECT*FROM berita WHERE Jenis='pengumuman'");
 
 
 
-                  <a class="nav-link" aria-current="page" href="../index.php">Beranda</a>
+                  <a class="nav-link" aria-current="page" href="index.php">Beranda</a>
 
 
 
@@ -132,7 +132,7 @@ $result = mysqli_query($conn,"SELECT*FROM berita WHERE Jenis='pengumuman'");
 
 
 
-                  <a class="nav-link active" href="#">Berita</a>
+                  <a class="nav-link active" href="Main/menu.php">Berita</a>
 
 
 
@@ -160,23 +160,23 @@ $result = mysqli_query($conn,"SELECT*FROM berita WHERE Jenis='pengumuman'");
 
 
 
-                    <li><a class="dropdown-item" href="../bidang/pembinaan.php">Pembinaan</a></li>
+                    <li><a class="dropdown-item" href="bidang/pembinaan.php">Pembinaan</a></li>
 
 
 
-                    <li><a class="dropdown-item" href="../bidang/intelijen.php">Intelijen</a></li>
+                    <li><a class="dropdown-item" href="bidang/intelijen.php">Intelijen</a></li>
 
 
 
-                    <li><a class="dropdown-item" href="../bidang/umum.php">Tindak Pidana Umum</a></li>
+                    <li><a class="dropdown-item" href="bidang/umum.php">Tindak Pidana Umum</a></li>
 
 
 
-                    <li><a class="dropdown-item" href="../bidang/khusus.php">Tindak Pidanan Khusus</a></li>
+                    <li><a class="dropdown-item" href="bidang/khusus.php">Tindak Pidanan Khusus</a></li>
 
 
 
-                    <li><a class="dropdown-item" href="../bidang/perdata.php">Perdata dan Tata Usaha</a></li>
+                    <li><a class="dropdown-item" href="bidang/perdata.php">Perdata dan Tata Usaha</a></li>
 
 
 
@@ -196,7 +196,7 @@ $result = mysqli_query($conn,"SELECT*FROM berita WHERE Jenis='pengumuman'");
 
 
 
-                    Profile
+              Profile
 
 
 
@@ -208,23 +208,23 @@ $result = mysqli_query($conn,"SELECT*FROM berita WHERE Jenis='pengumuman'");
 
 
 
-                    <li><a class="dropdown-item" href="../profile/struktur.php">Strutur Organisasi</a></li>
+                    <li><a class="dropdown-item" href="profile/struktur.php">Strutur Organisasi</a></li>
 
 
 
-                    <li><a class="dropdown-item" href="../profile/visimisi.php">Visi Misi</a></li>
+                    <li><a class="dropdown-item" href="profile/visimisi.php">Visi Misi</a></li>
 
 
 
-                    <li><a class="dropdown-item" href="../profile/perintah.php">Perintah Harian</a></li>
+                    <li><a class="dropdown-item" href="profile/perintah.php">Perintah Harian</a></li>
 
 
 
-                    <li><a class="dropdown-item" href="../profile/doktrin.php">Doktrin</a></li>
+                    <li><a class="dropdown-item" href="profile/doktrin.php">Doktrin</a></li>
 
 
 
-                    <li><a class="dropdown-item" href="../profile/tugas.php">Tugas dan Wewenang</a></li>
+                    <li><a class="dropdown-item" href="profile/tugas.php">Tugas dan Wewenang</a></li>
 
 
 

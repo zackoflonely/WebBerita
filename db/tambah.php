@@ -131,18 +131,18 @@ crossorigin="anonymous">
         <a class="nav-link active" aria-current="page" href="../../index.php">Beranda</a>
     </li>
     <li class="nav-item">
-        <a class="nav-link" href="../../Main/menu.php">Berita</a>
+        <a class="nav-link" href="../Main/menu.php">Berita</a>
     </li>
     <li class="nav-item dropdown">
         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
         Bidang
         </a>
         <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-        <li><a class="dropdown-item" href="../pembinaan.php">Pembinaan</a></li>
-        <li><a class="dropdown-item" href="../intelijen.php">Intelijen</a></li>
-        <li><a class="dropdown-item" href="../umum.php">Tindak Pidana Umum</a></li>
-        <li><a class="dropdown-item" href="../khusus.php">Tindak Pidanan Khusus</a></li>
-        <li><a class="dropdown-item" href="../perdata.php">Perdata dan Tata Usaha</a></li>
+        <li><a class="dropdown-item" href="../bidang/pembinaan.php">Pembinaan</a></li>
+        <li><a class="dropdown-item" href="../bidang/intelijen.php">Intelijen</a></li>
+        <li><a class="dropdown-item" href="../bidang/umum.php">Tindak Pidana Umum</a></li>
+        <li><a class="dropdown-item" href="../bidang/khusus.php">Tindak Pidanan Khusus</a></li>
+        <li><a class="dropdown-item" href="../bidang/perdata.php">Perdata dan Tata Usaha</a></li>
         </ul>
     </li>
     <li class="nav-item dropdown">
@@ -150,11 +150,11 @@ crossorigin="anonymous">
         Profile
         </a>
         <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-        <li><a class="dropdown-item" href="../../profile/struktur.php">Strutur Organisasi</a></li>
-        <li><a class="dropdown-item" href="../../profile/visimisi.php">Visi Misi</a></li>
-        <li><a class="dropdown-item" href="../../profile/perintah.php">Perintah Harian</a></li>
-        <li><a class="dropdown-item" href="../../profile/doktrin.php">Doktrin</a></li>
-        <li><a class="dropdown-item" href="../../profile/tugas.php">Tugas dan Wewenang</a></li>
+        <li><a class="dropdown-item" href="../profile/struktur.php">Strutur Organisasi</a></li>
+        <li><a class="dropdown-item" href="../profile/visimisi.php">Visi Misi</a></li>
+        <li><a class="dropdown-item" href="../profile/perintah.php">Perintah Harian</a></li>
+        <li><a class="dropdown-item" href="../profile/doktrin.php">Doktrin</a></li>
+        <li><a class="dropdown-item" href="../profile/tugas.php">Tugas dan Wewenang</a></li>
         </ul>
     </li>
     </ul>

@@ -152,7 +152,7 @@ crossorigin="anonymous">
 
 <header>
 
-<nav class="navbar fixed-top navbar-expand-lg navbar-light bg-white" >
+<nav class="navbar navbar-expand-lg navbar-light bg-white" >
 
     <div class="container-fluid">
 
