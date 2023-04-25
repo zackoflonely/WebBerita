@@ -44,7 +44,7 @@ $result = mysqli_query($conn,"SELECT*FROM berita WHERE Jenis='pengumuman'");
 
 
 
-  <link rel="stylesheet" href="../assets/style.css">
+  <link rel="stylesheet" href="assets/style.css">
 
 
 
@@ -88,7 +88,7 @@ $result = mysqli_query($conn,"SELECT*FROM berita WHERE Jenis='pengumuman'");
 
 
 
-              <img src="../assets/Image/icon.png" style="width:180px;" alt="">
+              <img src="assets/Image/icon.png" style="width:180px;" alt="">
 
 
 
@@ -418,7 +418,7 @@ while($row=mysqli_fetch_assoc($result)){
 
 
 
-        <img src="../assets/Image/icon.png" style="width:250px;" alt="">
+        <img src="assets/Image/icon.png" style="width:250px;" alt="">
 
 
 
